@@ -50,6 +50,7 @@ p { margin: 0; }
 
 .projects { display: grid; gap: 56px; }
 .project { display: grid; gap: 16px; min-width: 0; }
+.shot { width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--ph); }
 .ph {
   aspect-ratio: 16 / 9; max-width: 100%;
   background: var(--ph); border: 1.5px dashed var(--line);
@@ -115,11 +116,11 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
       </article>
 
       <article class="project">
-        <div class="ph">[ Add photo or video: bipedal robot walking ]</div>
-        <div class="meta"><h3>Bipedal Robot</h3><span class="mono">Jan – May 2026 · Graduate course project</span></div>
-        <p>I designed and 3D-printed the mechanical parts of a custom bipedal robot and iterated the design through gait testing.</p>
-        <p class="mono tags">CAD · 3D Printing · Gait Testing</p>
-        <a class="go" href="https://silver-gecko-abfc16.netlify.app/">Project page →</a>
+        <img class="shot" src="images/jumbot-b.png" alt="Render of Jumbot-B, a 3D-printed bipedal robot">
+        <div class="meta"><h3>Jumbot-B: 3D-Printed Bipedal Robot</h3><span class="mono">Jan – May 2026 · ME 134 Robotics Studio, Tufts</span></div>
+        <p>With teammate Xianmai Liang, I built a small bipedal robot end to end: Onshape CAD, PLA 3D printing, wiring, and gait tuning. It has eight servos and a Raspberry Pi, with hip pitch, yaw and roll plus a four-bar knee on each leg. Gaits come from joint angles recorded off the servo encoders and tuned by hand. Fixing the power wiring and re-tuning took its walking speed from 1.3 to 4 cm/s.</p>
+        <p class="mono tags">Onshape · 3D Printing · Raspberry Pi · LX-16A Servos · Gait Tuning</p>
+        <a class="go" href="https://silver-gecko-abfc16.netlify.app/">Full build log and videos →</a>
       </article>
 
       <article class="project">
