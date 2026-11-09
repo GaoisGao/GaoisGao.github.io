@@ -62,9 +62,9 @@ p { margin: 0; }
 .pair img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border: 1px solid var(--line); background: var(--ph); }
 .pair figcaption { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
 @media (max-width: 560px) { .pair { grid-template-columns: 1fr; } }
-.pair.mixed { grid-template-columns: 2.77fr 1fr; align-items: start; }
+.pair.mixed { grid-template-columns: 1.12fr 0.75fr 0.75fr; align-items: start; }
 .pair.mixed img { aspect-ratio: auto; object-fit: initial; }
-@media (max-width: 560px) { .pair.mixed { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .pair.mixed { grid-template-columns: 1fr 1fr; } .pair.mixed figure:first-child { grid-column: 1 / -1; } }
 .wide { margin: 0; min-width: 0; }
 .wide img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--ph); }
 .wide figcaption { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
@@ -144,8 +144,9 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
 
       <article class="project">
         <div class="pair mixed">
-          <figure><img src="images/jumbot-b.png" alt="Render of Jumbot-B, a 3D-printed bipedal robot" loading="lazy"><figcaption>CAD render</figcaption></figure>
+          <figure><img src="images/bipedal/render.jpg" alt="Render of Jumbot-B, a 3D-printed bipedal robot" loading="lazy"><figcaption>CAD render</figcaption></figure>
           <figure><img src="images/bipedal/real.jpg" alt="The assembled Jumbot-B standing on a table" loading="lazy"><figcaption>The built robot</figcaption></figure>
+          <figure><img src="images/bipedal/real-side.jpg" alt="Jumbot-B from the side, standing on a table in the lab" loading="lazy"><figcaption>Side view</figcaption></figure>
         </div>
         <div class="meta"><h3>Jumbot-B: 3D-Printed Bipedal Robot</h3><span class="mono">Jan – May 2026 · ME 134 Robotics Studio, Tufts</span></div>
         <p>With teammate Xianmai Liang, I built a small bipedal robot end to end: Onshape CAD, PLA 3D printing, wiring, and gait tuning. It has eight servos and a Raspberry Pi, with hip pitch, yaw and roll plus a four-bar knee on each leg. Gaits come from joint angles recorded off the servo encoders and tuned by hand. Fixing the power wiring and re-tuning took its walking speed from 1.3 to 4 cm/s.</p>
