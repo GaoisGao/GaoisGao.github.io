@@ -57,6 +57,11 @@ p { margin: 0; }
 .gifs figcaption { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 6px; display: grid; }
 .gifs figcaption b { color: var(--fg); font-weight: 500; }
 @media (max-width: 560px) { .gifs { grid-template-columns: 1fr; } }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.pair figure { margin: 0; min-width: 0; }
+.pair img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border: 1px solid var(--line); background: var(--ph); }
+.pair figcaption { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
+@media (max-width: 560px) { .pair { grid-template-columns: 1fr; } }
 .ph {
   aspect-ratio: 16 / 9; max-width: 100%;
   background: var(--ph); border: 1.5px dashed var(--line);
@@ -106,11 +111,14 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
     <div class="projects">
 
       <article class="project">
-        <div class="ph">[ Add photo or video: UR3e picking groceries ]</div>
+        <div class="pair">
+          <figure><img src="images/ur3e/setup.jpg" alt="UR3e arm above a taped workspace with an orange to pick up" loading="lazy" style="object-position: 50% 50%"><figcaption>UR3e workspace with an orange as the pick target</figcaption></figure>
+          <figure><img src="images/ur3e/gripper.jpg" alt="Wrist-mounted RealSense D455 and the 3D-printed TPU gripper" loading="lazy" style="object-position: 30% 70%"><figcaption>Wrist-mounted D455 and the 3D-printed TPU gripper</figcaption></figure>
+        </div>
         <div class="meta"><h3>UR3e Grocery Pick-and-Place</h3><span class="mono">Jan – May 2026</span></div>
         <p>A ROS 2 system where a UR3e arm finds groceries with a RealSense D455 and YOLOv11, plans pre-grasp, grasp and lift motions with MoveIt 2, and picks them up with a 3D-printed TPU gripper I designed. Tested in simulation and on the real robot.</p>
         <p class="mono tags">Python · C++ · ROS 2 · YOLOv11 · TF2 · MoveIt 2</p>
-        <a class="go" href="https://github.com/GaoisGao">Code on GitHub →</a>
+        <a class="go" href="https://github.com/GaoisGao/hello-grocery-pick-n-place">Code on GitHub →</a>
       </article>
 
       <article class="project">
