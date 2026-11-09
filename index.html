@@ -66,6 +66,7 @@ p { margin: 0; }
 .pair.mixed img { aspect-ratio: auto; object-fit: initial; }
 @media (max-width: 560px) { .pair.mixed { grid-template-columns: 1fr 1fr; } .pair.mixed figure:first-child { grid-column: 1 / -1; } }
 .wide { margin: 0; min-width: 0; }
+.wide.narrow { max-width: 440px; }
 .wide img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--ph); }
 .wide figcaption { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
 .ph {
@@ -130,7 +131,7 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
       </article>
 
       <article class="project">
-        <figure class="wide"><img src="images/lego/recorder.jpg" alt="The LEGO robot next to the trajectory recorder window showing a hand-drawn signature path" loading="lazy"><figcaption>Recording a hand-drawn signature as the robot's target path</figcaption></figure>
+        <figure class="wide narrow"><img src="images/lego/recorder.jpg" alt="The LEGO robot next to the trajectory recorder window showing a hand-drawn signature path" loading="lazy"><figcaption>Recording a hand-drawn signature as the robot's target path</figcaption></figure>
         <div class="gifs">
           <figure><img src="images/lego/demo_pp.gif" alt="Pure pursuit controller tracing a signature" loading="lazy" width="480" height="360"><figcaption><b>Pure pursuit</b>1.6 mm RMS</figcaption></figure>
           <figure><img src="images/lego/demo_bc.gif" alt="Behavior cloning policy tracing a signature" loading="lazy" width="480" height="360"><figcaption><b>Behavior cloning</b>1.7 mm RMS</figcaption></figure>
