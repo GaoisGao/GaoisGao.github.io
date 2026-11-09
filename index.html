@@ -81,6 +81,7 @@ p { margin: 0; }
 .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
 .tags { margin-top: 2px; }
 .project p { max-width: 38em; }
+.golinks { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .project .go { font-family: var(--font-mono); font-size: 0.85rem; }
 
 .rows { display: grid; gap: 28px; }
@@ -143,7 +144,10 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
         <div class="meta"><h3>LEGO Signature Imitation Learning Robot</h3><span class="mono">Summer 2026</span></div>
         <p>A differential-drive LEGO robot that reproduces a human-drawn signature, tracked with overhead vision and an onboard IMU. I compared a Pure Pursuit controller, an imitation-learning policy trained on its demonstrations, and a PPO policy trained in MuJoCo, all on the physical robot.</p>
         <p class="mono tags">Python · MuJoCo · Imitation Learning · PPO · Computer Vision</p>
-        <a class="go" href="https://github.com/GaoisGao/imitation-signature-legocar">Code on GitHub →</a>
+        <div class="golinks">
+          <a class="go" href="https://github.com/GaoisGao/imitation-signature-legocar">Code on GitHub →</a>
+          <a class="go" href="https://drive.google.com/file/d/1Hub6qR_aZnEiMjS0PTGtyrS31JlBA-8Q/view?usp=drive_link">Watch the demo video →</a>
+        </div>
       </article>
 
       <article class="project">
