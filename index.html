@@ -40,11 +40,12 @@ main { max-width: 760px; margin: 0 auto; display: grid; gap: 72px; }
 a { color: var(--accent); text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 h1, h2, h3 { text-wrap: balance; margin: 0; line-height: 1.15; }
-h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2rem, 5.5vw, 2.9rem); font-weight: 700; letter-spacing: -0.02em; }
 h2 { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
 h3 { font-size: 1.3rem; font-weight: 700; }
 p { margin: 0; }
 .mono { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+.portrait { display: block; width: 180px; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; margin-top: 20px; border: 1px solid var(--line); }
 .lead { font-size: 1.2rem; max-width: 34em; margin-top: 20px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 24px; font-family: var(--font-mono); font-size: 0.85rem; }
 
@@ -105,6 +106,7 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
   <header>
     <p class="mono">Medford, MA</p>
     <h1>Zhenkai (Kevin) Gao</h1>
+    <img class="portrait" src="images/portrait.jpg" alt="Portrait of Zhenkai (Kevin) Gao on a lakeside beach with a red lighthouse behind" width="640" height="640">
     <p class="lead">I am a mechanical engineering graduate student at Tufts, working on robot learning and human-robot interaction. I build robots end to end: the CAD, the controllers, and the policies that run on them.</p>
     <div class="links">
       <a href="#projects">Projects</a>
