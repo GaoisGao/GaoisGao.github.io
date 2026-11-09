@@ -51,6 +51,12 @@ p { margin: 0; }
 .projects { display: grid; gap: 56px; }
 .project { display: grid; gap: 16px; min-width: 0; }
 .shot { width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--ph); }
+.gifs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.gifs figure { margin: 0; min-width: 0; }
+.gifs img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--ph); }
+.gifs figcaption { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 6px; display: grid; }
+.gifs figcaption b { color: var(--fg); font-weight: 500; }
+@media (max-width: 560px) { .gifs { grid-template-columns: 1fr; } }
 .ph {
   aspect-ratio: 16 / 9; max-width: 100%;
   background: var(--ph); border: 1.5px dashed var(--line);
@@ -108,11 +114,15 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
       </article>
 
       <article class="project">
-        <div class="ph">[ Add photo or video: LEGO robot drawing a signature ]</div>
+        <div class="gifs">
+          <figure><img src="images/lego/demo_pp.gif" alt="Pure pursuit controller tracing a signature" loading="lazy" width="480" height="360"><figcaption><b>Pure pursuit</b>1.6 mm RMS</figcaption></figure>
+          <figure><img src="images/lego/demo_bc.gif" alt="Behavior cloning policy tracing a signature" loading="lazy" width="480" height="360"><figcaption><b>Behavior cloning</b>1.7 mm RMS</figcaption></figure>
+          <figure><img src="images/lego/demo_rl.gif" alt="Reinforcement learning policy tracing a signature" loading="lazy" width="480" height="360"><figcaption><b>Reinforcement learning</b>2.0 mm RMS</figcaption></figure>
+        </div>
         <div class="meta"><h3>LEGO Signature Imitation Learning Robot</h3><span class="mono">Summer 2026</span></div>
         <p>A differential-drive LEGO robot that reproduces a human-drawn signature, tracked with overhead vision and an onboard IMU. I compared a Pure Pursuit controller, an imitation-learning policy trained on its demonstrations, and a PPO policy trained in MuJoCo, all on the physical robot.</p>
         <p class="mono tags">Python · MuJoCo · Imitation Learning · PPO · Computer Vision</p>
-        <a class="go" href="https://github.com/GaoisGao">Code on GitHub →</a>
+        <a class="go" href="https://github.com/GaoisGao/imitation-signature-legocar">Code on GitHub →</a>
       </article>
 
       <article class="project">
