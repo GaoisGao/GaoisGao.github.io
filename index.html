@@ -79,6 +79,8 @@ p { margin: 0; }
 .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
 .tags { margin-top: 2px; }
 .project p { max-width: 38em; }
+.project ul { margin: 0; padding-left: 1.1em; max-width: 38em; }
+.project li + li { margin-top: 6px; }
 .golinks { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .project .go { font-family: var(--font-mono); font-size: 0.85rem; }
 
@@ -134,6 +136,21 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
       </article>
 
       <article class="project">
+        <div class="pair mixed">
+          <figure><img src="images/bipedal/render.jpg" alt="Render of Jumbot-B, a 3D-printed bipedal robot" loading="lazy"><figcaption>CAD render</figcaption></figure>
+          <figure><img src="images/bipedal/real.jpg" alt="The assembled Jumbot-B standing on a table" loading="lazy"><figcaption>The built robot</figcaption></figure>
+          <figure><img src="images/bipedal/real-side.jpg" alt="Jumbot-B from the side, standing on a table in the lab" loading="lazy"><figcaption>Side view</figcaption></figure>
+        </div>
+        <div class="meta"><h3>Jumbot-B: 3D-Printed Bipedal Robot</h3><span class="mono">Jan – May 2026 · ME 134 Robotics Studio, Tufts</span></div>
+        <ul>
+          <li>Co-built a 3D-printed bipedal robot using a Raspberry Pi 4 and eight LX-16A bus servos, with encoder feedback for gait tuning. I designed and 3D-printed the mechanical parts and iterated them through gait testing.</li>
+          <li>Helped troubleshoot voltage drop in the servo power wiring and retune the gait, improving measured walking speed from 1.3 to 4.0 cm/s.</li>
+        </ul>
+        <p class="mono tags">Onshape · 3D Printing · Raspberry Pi · LX-16A Servos · Gait Tuning</p>
+        <a class="go" href="https://silver-gecko-abfc16.netlify.app/">Full build log and videos →</a>
+      </article>
+
+      <article class="project">
         <figure class="wide narrow"><img src="images/lego/recorder.jpg" alt="The LEGO robot next to the trajectory recorder window showing a hand-drawn signature path" loading="lazy"><figcaption>Recording a hand-drawn signature as the robot's target path</figcaption></figure>
         <div class="gifs">
           <figure><img src="images/lego/demo_pp.gif" alt="Pure pursuit controller tracing a signature" loading="lazy" width="480" height="360"><figcaption><b>Pure pursuit</b>1.6 mm RMS</figcaption></figure>
@@ -147,18 +164,6 @@ footer { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); 
           <a class="go" href="https://github.com/GaoisGao/imitation-signature-legocar">Code on GitHub →</a>
           <a class="go" href="https://drive.google.com/file/d/1Hub6qR_aZnEiMjS0PTGtyrS31JlBA-8Q/view?usp=drive_link">Watch the demo video →</a>
         </div>
-      </article>
-
-      <article class="project">
-        <div class="pair mixed">
-          <figure><img src="images/bipedal/render.jpg" alt="Render of Jumbot-B, a 3D-printed bipedal robot" loading="lazy"><figcaption>CAD render</figcaption></figure>
-          <figure><img src="images/bipedal/real.jpg" alt="The assembled Jumbot-B standing on a table" loading="lazy"><figcaption>The built robot</figcaption></figure>
-          <figure><img src="images/bipedal/real-side.jpg" alt="Jumbot-B from the side, standing on a table in the lab" loading="lazy"><figcaption>Side view</figcaption></figure>
-        </div>
-        <div class="meta"><h3>Jumbot-B: 3D-Printed Bipedal Robot</h3><span class="mono">Jan – May 2026 · ME 134 Robotics Studio, Tufts</span></div>
-        <p>With teammate Xianmai Liang, I built a small bipedal robot end to end: Onshape CAD, PLA 3D printing, wiring, and gait tuning. It has eight servos and a Raspberry Pi, with hip pitch, yaw and roll plus a four-bar knee on each leg. Gaits come from joint angles recorded off the servo encoders and tuned by hand. Fixing the power wiring and re-tuning took its walking speed from 1.3 to 4 cm/s.</p>
-        <p class="mono tags">Onshape · 3D Printing · Raspberry Pi · LX-16A Servos · Gait Tuning</p>
-        <a class="go" href="https://silver-gecko-abfc16.netlify.app/">Full build log and videos →</a>
       </article>
 
       <article class="project">
